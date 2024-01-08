@@ -1,7 +1,7 @@
 /** 
  * Prints the calendars of all the years in the 20th century.
  */
-public class Calendar1 {	
+public class BackUp {	
     // Starting the calendar on 1/1/1900
 	static int dayOfMonth = 1;   
 	static int month = 1;
@@ -15,11 +15,12 @@ public class Calendar1 {
 	    // Prints each date dd/mm/yyyy in a separate line. If the day is a Sunday, prints "Sunday".
 	    // The following variable, used for debugging purposes, counts how many days were advanced so far.
 	    //int debugDaysCounter = 0; 
+	    int currentYear = Integer.parseInt(args[0]);
 
 		int sundayCounter = 0;
 
 
-		while ( year <= 1999 && month <= 12 && dayOfMonth <= 31){
+		while ( month <= 12 && dayOfMonth <= 31){
 				System.out.print(dayOfMonth + "/" + month + "/" + year);
 				if ((dayOfWeek == 1 && dayOfMonth == 1) || dayOfWeek == 1) {
 					System.out.print(" Sunday");
@@ -30,7 +31,7 @@ public class Calendar1 {
 				advance();
 					
 				}
-		System.out.println("During the 20th century, " + sundayCounter+  " Sundays fell on the first day of the month");
+
 				
 
 		}
